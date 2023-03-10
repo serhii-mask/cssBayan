@@ -1,0 +1,11 @@
+
+.item__block {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.item__cross {
+	/* font-size: 2em; */
+	/* font-weight: 400; */
+}
