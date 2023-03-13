@@ -1,44 +1,138 @@
 .bayan {
-	max-width: 1920px;
-	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 }
 
-
-.bayan__cross {
-	margin: 0;
-	transform: rotate(45deg);
+.bayan__title {
+	margin-bottom: 0.5rem;
 }
 
-.bayan label {
-	font-size: 1.7rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	cursor: pointer;
-} 
+.bayan__block {
+	margin-bottom: 0.5rem;
+	border-top: 0.07rem solid #DAE0E4;
+	
+}
 
 .bayan input {
 	display: none;
 }
+
+.bayan__cross {
+	display: none;
+	margin: 0;
+	transform: rotate(45deg);
+}
+
+.bayan__block input:checked~.bayan__lable>.bayan__cross {
+	transform: rotate(90deg);
+}
+
+.bayan:hover .bayan__cross {
+	display: block;
+}
+
+.bayan__lable {
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	cursor: pointer;
+
+	color: #0059D9;
+	fill: #0059D9;
+} 
  
 .bayan article {
 	overflow: hidden;
 	height: 0;
-	transition: height 0.3s ease-in-out;
+	scale: 0;
+	transition: height 0.3s ease-in-out, scale  0.3s ease-in-out;
 }
  
 .bayan input:checked~article {
-	transition: height 0.3s ease-in-out;
-	height: 25em;
+	transition: height 0.3s ease-in-out, scale  0.3s ease-in-out;
+	scale: 1;
+	height: 18em;
 }
 
 .bayan input:checked~.bayan__lable {
-	color: #0059D9;
-	fill: #0059D9;
+	color: #000;
+	fill: #000;
 }
 
-.bayan input:checked~.bayan__lable .bayan__cross {
-	transform: rotate(-45deg);
+.bayan:hover .bayan__lable {
+	color: #000;
+	fill: #000;
+}
+
+@media screen and (max-width: 319px) {
+	.bayan {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 818px) {
+	.bayan {
+		width: 320px;
+	}
+}
+
+@media screen and (min-width: 820px) and (max-width: 1919px) {
+	body {
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+	
+	.bayan {
+		width: 820px;
+	}
+
+	.bayan .bayan__lable {
+		align-items: center;
+	} 
+
+	.bayan__title {
+		margin-bottom: 1rem;
+	}
+
+	.bayan input:checked~article {
+		height: 26em;
+	}
+
+	.bayan__block {
+		margin-bottom: 1rem;
+	}
+
+	.bayan__lable {
+		font-weight: 700;
+		font-size: 1.5rem;
+	} 
+}
+
+@media screen and (min-width: 1920px) {
+	.bayan {
+		width: 1920px;
+	}
+
+	.bayan__title {
+		margin-bottom: 1.5rem;
+	}
+
+	.bayan input:checked~article {
+		height: 20em;
+	}
+
+	.bayan__block {
+		margin-bottom: 1.5rem;
+	}
+
+	body {
+		font-size: 2em;
+	}
+
+	.bayan__lable {
+		font-size: 2rem;
+		font-weight: 700;
+	} 
+	
 }
