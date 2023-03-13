@@ -1,5 +1,6 @@
 .bayan {
-	width: 700px;
+	max-width: 1920px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -29,15 +30,15 @@
 }
  
 .bayan input:checked~article {
-	color: blue;
 	transition: height 0.3s ease-in-out;
 	height: 25em;
 }
 
-.bayan input:checked .bayan__cross {
-	transform: rotate(-45deg);
+.bayan input:checked~.bayan__lable {
+	color: #0059D9;
+	fill: #0059D9;
 }
 
-.bayan__block:active .bayan__cross {
+.bayan input:checked~.bayan__lable .bayan__cross {
 	transform: rotate(-45deg);
 }
