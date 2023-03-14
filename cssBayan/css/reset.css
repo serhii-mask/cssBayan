@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	font-family: 'Kanit', sans-serif;
+	font-style: normal;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0.03em;
+}
+
+h1,
+h2 {
+	margin: 0;
+}
+
+img {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+
+/* section {
+	margin: 0 auto;
+
+   @media screen and (max-width: 319px) {
+   	width: 100%;
+   }
+   @media screen and (min-width: 320px) and (max-width: 819px) {
+   	width: 320px;
+   }
+   @media screen and (min-width: 820px) and (max-width: 1919px) {
+   	width: 820px;
+   }
+   @media screen and (min-width: 1920px) {
+   	width: 1920px;
+   }
+}
+
+.hidden {
+	font-size: 0;
+} */
